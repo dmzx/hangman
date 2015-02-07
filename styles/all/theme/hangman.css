@@ -1,0 +1,20 @@
+/*
+*
+* @package Hangman game
+* @author dmzx (www.dmzx-web.net)
+* @copyright (c) 2015 by dmzx (www.dmzx-web.net)
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* 
+*/
+
+.alpha-butt{width: 40px;}
+
+.nq{width: 100px;}
+
+.tarea{font-weight: bold;}
+
+.icon-hangman {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-image: url("./images/icon_hangman.gif");
+}
