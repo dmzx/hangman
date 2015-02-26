@@ -54,5 +54,5 @@ $lang = array_merge($lang, array(
    'HANGMAN_NEW_QUOTE_TO'   => 'Cliquer sur “Nouvelle citation” pour démarrer !',
    'HANGMAN_YOU_LOSE'   => 'Vous perdez - réessayez !',
    'HANGMAN_LETTER'   => 'La lettre',
-   'HANGMAN_ALREADY_USED'   => 'est déjà utilisée !',
+   'HANGMAN_ALREADY_USED'   => 'est déjà utilisée !', 
 ));
