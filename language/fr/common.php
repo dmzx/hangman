@@ -49,4 +49,10 @@ $lang = array_merge($lang, array(
    'HANGMAN_NEW_QUOTE_START'   => 'Cliquer sur Nouvelle citation pour démarrer le jeu du pendu',
    'HANGMAN_FAILED_TRIES'   => 'Essais échoués',
    'HANGMAN_CORRECT_TRIES'   => 'Essais corrects',
+   'HANGMAN_YOUWIN'   => 'You Win!',
+   'HANGMAN_QUOTE_ALREADY'   => 'Quote already in play!',
+   'HANGMAN_NEW_QUOTE_TO'   => 'Click New Quote to start !',
+   'HANGMAN_YOU_LOSE'   => 'You lose - Try again!',
+   'HANGMAN_LETTER'   => 'Letter',
+   'HANGMAN_ALREADY_USED'   => 'is already used!',
 ));

@@ -3,7 +3,7 @@
     "type": "phpbb-extension",
     "description": "This extension will add hangman game",
     "homepage": "http://www.dmzx-web.net",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "time": "2015-02-07",
 	"keywords": ["phpbb", "extension", "hangman"],
     "license": "GPL-2.0",

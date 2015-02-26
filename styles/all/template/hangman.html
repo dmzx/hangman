@@ -1,21 +1,21 @@
-<!-- INCLUDECSS @dmzx_hangman/../theme/hangman.css -->
+<!-- INCLUDECSS @dmzx_hangman/hangman.css -->
 <!-- INCLUDE overall_header.html -->
 
 <form name="frm">
  <div style="forabg">
   <h2>{L_HANGMAN_TITLE}</h2>
-   <table width=50% align=center>
+   <table>
     <tr>
-	 <td width=50></td>
-	 <td align="center">
-		<p><img src="{ROOT_PATH}ext/dmzx/hangman/styles/all/theme/images/hmstart3.gif" height="150" width="150" name="hm"></p>
+	 <td></td>
+	 <td>
+		<p><img src="{ROOT_PATH}ext/dmzx/hangman/styles/all/theme/images/hmstart3.gif" height="150" width="150" name="hm" alt=""></p>
 	 </td>
 
-	   <td align="center">
+	   <td>
 		<table>
          <tbody>
           <tr>
-           <td rowspan="2">{L_HANGMAN_TENLIVES}<br>
+           <td>{L_HANGMAN_TENLIVES}<br>
            {L_HANGMAN_SCORE}
              <input type="text" size="2" onfocus="score.blur();" value="0" name="score"> {L_HANGMAN_LIVES_USED}
              <input type="text" size="2" onfocus="lives.blur();" value="0" name="lives">
@@ -30,9 +30,9 @@
 
 </table><br>
   
-<table class="navbar" align="center">
+<table class="navbar">
  <tr>
-  <td align="center">
+  <td>
    <br>
     <textarea class="tarea" onfocus="word.blur();" name="word" cols="81" rows="1">	{L_HANGMAN_NEW_QUOTE_START}</textarea>
    <br>
@@ -83,5 +83,4 @@
    </table>
   </div>
  </form>
- <!-- INCLUDEJS @dmzx_hangman/hangman.js -->
 <!-- INCLUDE overall_footer.html -->
