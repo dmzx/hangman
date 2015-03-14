@@ -5,7 +5,7 @@
 * @author dmzx (www.dmzx-web.net)
 * @copyright (c) 2015 by dmzx (www.dmzx-web.net)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-* 
+*
 */
 
 namespace dmzx\hangman\event;
@@ -56,7 +56,7 @@ class listener implements EventSubscriberInterface
 		);
 		$event['lang_set_ext'] = $lang_set_ext;
 	}
-	
+
 	public function add_page_header_link($event)
 	{
 		$this->template->assign_vars(array(

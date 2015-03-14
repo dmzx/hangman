@@ -96,8 +96,6 @@ var words = new Array("Do or Die",
 					 "Bed is the poor mans opera",
 					 "One in thousand becomes a leader the rest follow women");
 
-
-
 function pick()
 {
 	var choice="";
@@ -106,11 +104,11 @@ function pick()
 	for(i=0; i<words[index].length; i++)
 	{
 		t=0;
-		for(j=0; j<=alpha_index; j++) 
+		for(j=0; j<=alpha_index; j++)
 			if(words[index].charAt(i)==alpha[j] || words[index].charAt(i)==alpha[j].toLowerCase()) t=1;
-   
+
 		if(t) choice+=words[index].charAt(i)+" ";
-		else 
+		else
 		{
 		  if(words[index].charAt(i)==' ')
 		  {
@@ -118,14 +116,14 @@ function pick()
 		  }
 		  else
 		  {
-		        choice+="_ ";
+				choice+="_ ";
 			blank=1;
 		  }
 		}
 	}
-	
+
 	document.frm.word.value=choice;
-    
+
 	if(!blank)
 	{
 		alert('{LA_HANGMAN_YOUWIN}');
@@ -135,7 +133,6 @@ function pick()
 	}
 }
 
-
 function new_word(form)
 {
 	if(!running)
@@ -144,7 +141,7 @@ function new_word(form)
 		failnum=0;
 		form.lives.value=failnum;
 		form.tried.value="";
-		form.correct.value="";    
+		form.correct.value="";
 		form.word.value="";
 		index=Math.round(Math.random()*10000) % 100;
 		alpha[0]=words[index].charAt(0);
@@ -157,10 +154,10 @@ function new_word(form)
 	}
 	else
 		advise("{LA_HANGMAN_QUOTE_ALREADY}");
-		
+
 	document.frm.res.disabled=false;
 	document.frm.hm.src="../ext/dmzx/hangman/styles/all/theme/images/hmstart3.gif";
-  
+
 	for(var i=65; i<=90; i++)
 		document.getElementById(String.fromCharCode(i)).style.backgroundColor='#D3D3D3';
 }
@@ -171,7 +168,7 @@ function restart(form)
 	failnum=0;
 	form.lives.value=failnum;
 	form.tried.value="";
-	form.correct.value="";    
+	form.correct.value="";
 	form.word.value="";
 	index=Math.round(Math.random()*10000) % 100;
 	alpha[0]=words[index].charAt(0);
@@ -181,8 +178,8 @@ function restart(form)
 	bravo[1]=words[index].charAt(words[index].length-1);
 	bravo_index=1;
 	pick();
-	document.frm.hm.src="../ext/dmzx/hangman/styles/all/theme/images/hmstart3.gif";    
-    
+	document.frm.hm.src="../ext/dmzx/hangman/styles/all/theme/images/hmstart3.gif";
+
 	for(var i=65; i<=90; i++)
 		document.getElementById(String.fromCharCode(i)).style.backgroundColor='#D3D3D3';
 }
@@ -197,32 +194,32 @@ function seek(letter)
 		for(i=0; i<=bravo_index; i++)
 			if (bravo[i]==letter || bravo[i]==letter.toLowerCase()) t=1;
 
-		if(!t) 
+		if(!t)
 		{
 			bravo_index++;
 			bravo[bravo_index]=letter;
-	    
+
 			for(i=0;i<words[index].length;i++)
 				if(words[index].charAt(i)==letter || words[index].charAt(i)==letter.toLowerCase()) t=1;
-		
+
 			if(t)
 			{
 				alpha_index++;
 				alpha[alpha_index]=letter;
-				document.frm.correct.value+=letter+" ";	      
-		      		document.getElementById(letter).style.backgroundColor='#FFF8DC';	 
+				document.frm.correct.value+=letter+" ";
+			  		document.getElementById(letter).style.backgroundColor='#FFF8DC';
 			}
 			else
 			{
 				failnum++;
-				document.frm.tried.value+=letter+" ";	    
+				document.frm.tried.value+=letter+" ";
 				eval("document.hm.src=\"../ext/dmzx/hangman/styles/all/theme/images/hm" + failnum + ".gif\"");
-		      		document.getElementById(letter).style.backgroundColor='#CCD8FF';
+			  		document.getElementById(letter).style.backgroundColor='#CCD8FF';
 			}
-			
+
 			document.frm.lives.value=failnum;
 
-			if(failnum==10) 
+			if(failnum==10)
 			{
 				alert('{LA_HANGMAN_YOU_LOSE}');
 				document.frm.score.value--;
@@ -234,7 +231,7 @@ function seek(letter)
 		else
 			advise("{LA_HANGMAN_LETTER} "+letter+" {LA_HANGMAN_ALREADY_USED}");
 	  }
-  
+
 }
 
 function advise(msg)
@@ -242,7 +239,7 @@ function advise(msg)
 	if(!advising)
 	{
 		advising=-1;
-		savetext=document.frm.correct.value;  
+		savetext=document.frm.correct.value;
 		document.frm.correct.value=msg;
 		window.setTimeout("document.frm.correct.value=savetext; advising=0;",500);
 	}

@@ -6,7 +6,7 @@
 * @copyright (c) 2015 by dmzx (www.dmzx-web.net)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 * @translated into French by Galixte (http://www.galixte.com)
-* 
+*
 */
 
 /**
@@ -54,5 +54,5 @@ $lang = array_merge($lang, array(
    'HANGMAN_NEW_QUOTE_TO'   => 'Cliquer sur « Nouvelle citation » pour démarrer !',
    'HANGMAN_YOU_LOSE'   => 'Vous perdez - réessayez !',
    'HANGMAN_LETTER'   => 'La lettre',
-   'HANGMAN_ALREADY_USED'   => 'est déjà utilisée !', 
+   'HANGMAN_ALREADY_USED'   => 'est déjà utilisée !',
 ));

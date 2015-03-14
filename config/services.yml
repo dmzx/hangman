@@ -10,6 +10,6 @@ services:
         class: dmzx\hangman\event\listener
         arguments:
             - @controller.helper
-            - @template		
+            - @template
         tags:
             - { name: event.listener }
