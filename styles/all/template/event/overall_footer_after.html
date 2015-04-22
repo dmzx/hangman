@@ -110,15 +110,15 @@ function pick()
 		if(t) choice+=words[index].charAt(i)+" ";
 		else
 		{
-		  if(words[index].charAt(i)==' ')
-		  {
-		  	choice += "  ";
-		  }
-		  else
-		  {
+			if(words[index].charAt(i)==' ')
+			{
+				choice += "	";
+			}
+			else
+			{
 				choice+="_ ";
 			blank=1;
-		  }
+			}
 		}
 	}
 
@@ -207,14 +207,14 @@ function seek(letter)
 				alpha_index++;
 				alpha[alpha_index]=letter;
 				document.frm.correct.value+=letter+" ";
-			  		document.getElementById(letter).style.backgroundColor='#FFF8DC';
+						document.getElementById(letter).style.backgroundColor='#FFF8DC';
 			}
 			else
 			{
 				failnum++;
 				document.frm.tried.value+=letter+" ";
 				eval("document.hm.src=\"../ext/dmzx/hangman/styles/all/theme/images/hm" + failnum + ".gif\"");
-			  		document.getElementById(letter).style.backgroundColor='#CCD8FF';
+						document.getElementById(letter).style.backgroundColor='#CCD8FF';
 			}
 
 			document.frm.lives.value=failnum;
@@ -230,7 +230,7 @@ function seek(letter)
 		}
 		else
 			advise("{LA_HANGMAN_LETTER} "+letter+" {LA_HANGMAN_ALREADY_USED}");
-	  }
+		}
 
 }
 
